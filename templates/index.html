@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hate Speech Detector</title>
+</head>
+<body style="font-family:sans-serif;text-align:center;margin-top:80px;">
+    <h1>🚨 Hate Speech Detector</h1>
+    <form method="POST" action="/predict">
+        <textarea name="tweet" rows="5" cols="60" placeholder="Enter a tweet..." required></textarea><br><br>
+        <button type="submit">Check</button>
+    </form>
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
